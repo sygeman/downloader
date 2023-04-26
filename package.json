@@ -1,0 +1,16 @@
+{
+  "name": "downloader",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "dotenv": "16.0.3",
+    "minio": "7.0.33",
+    "vk-io": "4.8.3"
+  }
+}
