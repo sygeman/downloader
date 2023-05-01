@@ -1,7 +1,7 @@
 import { unlink } from "fs/promises";
 import http from "http";
 import https from "https";
-import fs from "fs";
+import fs, { createReadStream } from "fs";
 import dotenv from "dotenv";
 import { VK } from "vk-io";
 import { createS3Client } from "./s3-client.mjs";
