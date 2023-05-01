@@ -5,6 +5,7 @@ import fs from "fs";
 import dotenv from "dotenv";
 import { VK } from "vk-io";
 import { createS3Client } from "./s3-client.mjs";
+import { PutObjectCommand } from "@aws-sdk/client-s3";
 
 dotenv.config();
 
@@ -27,9 +28,7 @@ export class App {
             file.write(chunk);
             downloaded += chunk.length;
             percent = ((100.0 * downloaded) / len).toFixed(2);
-            process.stdout.write(
-              `Downloading ${percent}% ${downloaded} bytes\r`
-            );
+            console.log(percent);
           })
           .on("end", function () {
             file.end();
